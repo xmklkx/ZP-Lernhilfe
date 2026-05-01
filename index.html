@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lernarena - Fach wählen</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <main class="home">
+      <header class="hero">
+        <div>
+          <span class="eyebrow">Lernarena</span>
+          <h1>Welches Fach willst du lernen?</h1>
+          <p>Wähle zuerst ein Fach. Danach kommen die Themengebiete, dann Erklärungen oder Testmodus, dann die passende Trainingsseite.</p>
+        </div>
+        <section class="profile-card">
+          <span class="eyebrow">Profil</span>
+          <label class="compact-label">
+            Name
+            <input id="playerNameInput" type="text" placeholder="Dein Name" />
+          </label>
+          <h2 id="rankTitle">Starter</h2>
+          <div class="xp-row">
+            <span id="xpText">0 XP</span>
+            <span id="nextRankText">bis Bronze</span>
+          </div>
+          <div class="progress-track"><div id="xpProgress" class="progress-fill"></div></div>
+          <label class="compact-label">
+            Tagesziel
+            <select id="dailyGoalSelect">
+              <option value="10">10 Fragen</option>
+              <option value="20">20 Fragen</option>
+              <option value="50">50 Fragen</option>
+              <option value="100">100 Fragen</option>
+            </select>
+          </label>
+          <button id="themeToggle" class="ghost-button full-button">Dark Mode</button>
+        </section>
+      </header>
+
+      <section class="subject-choice">
+        <a class="mode-card subject-card" href="fach.html?subject=english">
+          <strong>Englisch</strong>
+          <span>2000 Vokabeln, Grammatik, Kommasetzung und rhetorische Mittel.</span>
+        </a>
+        <a class="mode-card subject-card" href="fach.html?subject=german">
+          <strong>Deutsch</strong>
+          <span>5000 Rechtschreibwörter, Grammatik, Kommasetzung und rhetorische Mittel.</span>
+        </a>
+        <a class="mode-card subject-card" href="fach.html?subject=math">
+          <strong>Mathe</strong>
+          <span>500 Fragen zu Rechenregeln, Formeln, Operatoren und Klassenstufen.</span>
+        </a>
+      </section>
+
+      <section class="leaderboard-card">
+        <div>
+          <span class="eyebrow">Leaderboard</span>
+          <h2>Rangliste</h2>
+        </div>
+        <ol id="leaderboard" class="leaderboard"></ol>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="dashboard-card">
+          <span class="eyebrow">Heute</span>
+          <h2 id="dailyGoalText">0/20 Fragen</h2>
+          <div class="progress-track"><div id="dailyGoalProgress" class="progress-fill"></div></div>
+        </article>
+        <article class="dashboard-card">
+          <span class="eyebrow">Fehlerliste</span>
+          <h2>Gezielt üben</h2>
+          <ul id="mistakeList" class="simple-list"></ul>
+          <a class="inline-action" href="multiple-choice.html?subject=all&topic=mistakes&mode=choice&phase=review&count=20&direction=auto">Fehler üben</a>
+        </article>
+        <article class="dashboard-card">
+          <span class="eyebrow">Badges</span>
+          <h2>Erfolge</h2>
+          <div id="badgeList" class="badge-list"></div>
+        </article>
+      </section>
+
+      <section class="leaderboard-card">
+        <div>
+          <span class="eyebrow">Eigene Inhalte</span>
+          <h2>Import</h2>
+        </div>
+        <div class="import-panel">
+          <label>Themenname <input id="customTopicName" type="text" placeholder="z. B. Englisch Unit 3" /></label>
+          <label>Fach
+            <select id="customTopicSubject">
+              <option value="english">Englisch</option>
+              <option value="german">Deutsch</option>
+              <option value="math">Mathe</option>
+            </select>
+          </label>
+          <label>Inhalte
+            <textarea id="customTopicData" rows="5" placeholder="Frage;Antwort&#10;word;Wort&#10;2 + 2;4"></textarea>
+          </label>
+          <button id="customTopicButton">Thema speichern</button>
+        </div>
+      </section>
+
+      <section class="leaderboard-card">
+        <div>
+          <span class="eyebrow">Fortschritt</span>
+          <h2>Themen</h2>
+        </div>
+        <div id="topicProgress" class="topic-progress"></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

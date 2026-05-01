@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Karteikarten - Lernarena</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="trainer" data-mode="flash">
+    <main class="trainer-page">
+      <nav class="top-nav">
+        <a href="index.html">Start</a>
+        <a id="backToTopics" href="fach.html">Themen</a>
+        <a id="switchChoice" href="multiple-choice.html">Multiple Choice</a>
+        <a id="switchType" href="eingeben.html">Eingeben</a>
+        <a id="switchFlash" href="karteikarten.html">Karteikarten</a>
+        <button id="settingsButton" class="ghost-button settings-button">⚙</button>
+      </nav>
+      <section id="settingsPanel" class="settings-panel hidden">
+        <label>Anzahl <select id="countSetting"></select></label>
+        <label>Sprache/Richtung <select id="directionSetting"></select></label>
+      </section>
+      <section class="trainer-shell">
+        <aside class="session-panel">
+          <span class="eyebrow" id="phaseLabel">Lernen</span>
+          <h1 id="sessionTitle">Training</h1>
+          <p id="sessionMeta"></p>
+          <div class="stat-grid">
+            <div><strong id="questionCounter">0/0</strong><span>Fragen</span></div>
+            <div><strong id="sessionXp">0</strong><span>XP</span></div>
+            <div><strong id="streakText">0</strong><span>Serie</span></div>
+          </div>
+          <section class="mini-leaderboard">
+            <span class="eyebrow">Leaderboard</span>
+            <ol id="leaderboard" class="leaderboard"></ol>
+          </section>
+        </aside>
+        <article class="question-panel">
+          <div id="ruleBox" class="rule-box"></div>
+          <button id="speakButton" class="ghost-button hidden">Wort anhören</button>
+          <h2 id="questionText">Frage wird geladen...</h2>
+          <div id="answerArea" class="answer-area"></div>
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+          <div class="trainer-actions">
+            <button id="checkButton">Gewusst</button>
+            <button id="nextButton" class="ghost-button">Nächste Frage</button>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

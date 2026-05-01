@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lernarena - Themen</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="subject">
+    <main class="home">
+      <nav class="top-nav"><a href="index.html">Fach wechseln</a></nav>
+      <header class="hero slim">
+        <div>
+          <span class="eyebrow" id="subjectKicker">Fach</span>
+          <h1 id="subjectTitle">Thema auswählen</h1>
+          <p id="subjectText">Wähle ein Themengebiet. Danach entscheidest du, ob du zuerst Erklärungen sehen oder direkt testen willst.</p>
+        </div>
+        <section class="profile-card">
+          <span class="eyebrow">Profil</span>
+          <h2 id="rankTitle">Starter</h2>
+          <div class="xp-row"><span id="xpText">0 XP</span><span id="nextRankText">bis Bronze</span></div>
+          <div class="progress-track"><div id="xpProgress" class="progress-fill"></div></div>
+        </section>
+      </header>
+      <section id="topicGrid" class="mode-grid topic-grid"></section>
+      <section class="leaderboard-card">
+        <div><span class="eyebrow">Fortschritt</span><h2>In diesem Fach</h2></div>
+        <div id="topicProgress" class="topic-progress"></div>
+      </section>
+      <section class="leaderboard-card">
+        <div><span class="eyebrow">Leaderboard</span><h2>Rangliste</h2></div>
+        <ol id="leaderboard" class="leaderboard"></ol>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
